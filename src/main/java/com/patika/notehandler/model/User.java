@@ -1,6 +1,7 @@
 package com.patika.notehandler.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class User {
     private Long id;
 
     @Column(name = "email", unique = true, nullable = false)
+    @Email
     private String email;
 
     @Column(name = "username", unique = true, nullable = false)
